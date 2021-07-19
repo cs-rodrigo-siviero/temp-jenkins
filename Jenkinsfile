@@ -4,6 +4,7 @@ agent { node { label 'docker' } }
         stage('Build') {
             steps {
                 sh '''
+                apk add php
                 ls -lah
                 '''
             }
