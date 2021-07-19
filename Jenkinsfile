@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'php' } }
+    agent { docker { label 'docker' } }
     stages {
         stage('build') {
             steps {
