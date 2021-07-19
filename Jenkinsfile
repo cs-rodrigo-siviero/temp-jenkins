@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            label 'docker'
-            image 'php:latest'
-        }
-    }
+agent { node { label 'docker' } }
     stages {
         stage('Build') {
             steps {
