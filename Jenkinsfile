@@ -3,7 +3,10 @@ agent { node { label 'docker' } }
     stages {
         stage('Build') {
             steps {
-                shell 'php --version'
+                script('''
+                   apt install php
+                   php --version
+                ''')
             }
         }
     }
