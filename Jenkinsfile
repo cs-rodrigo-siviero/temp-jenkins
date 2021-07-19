@@ -1,4 +1,4 @@
-pipeline {]
+pipeline {
     agent any
     stages {
         agent { docker { label 'docker' } }
