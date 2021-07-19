@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-        agent { docker { label 'docker' } }
         stage('build') {
+            agent { docker { label 'docker' } }
             steps {
                 sh 'php --version'
             }
