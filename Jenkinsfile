@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             label 'docker'
+            image 'php:latest'
         }
     }
     stages {
