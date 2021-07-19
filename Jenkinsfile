@@ -4,8 +4,7 @@ agent { node { label 'docker' } }
         stage('Build') {
             steps {
                 sh '''
-                sudo apt install php
-                php --version
+                ls -lah
                 '''
             }
         }
