@@ -1,10 +1,20 @@
 pipeline {
     agent any
+
     stages {
-        stage('build') {
-            agent { docker { label 'docker' } }
+        stage('Build') {
             steps {
-                sh 'php --version'
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
